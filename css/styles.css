@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-ul {
+ul, ol {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
@@ -12,6 +12,11 @@ ul {
 
 img {
     display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -33,7 +38,22 @@ body {
     margin: 0 auto;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
+li {
+    list-style-type: none;
+}
 
 /* ---Header--- */
 
@@ -133,6 +153,11 @@ body {
 .hero {
     text-align: center;
     padding: 188px 0;
+    background-color: #2E2F42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-title {
@@ -164,10 +189,6 @@ body {
     background-color: #404BBF;
 }
 
-.hero {
-    background-color: #2E2F42;
-}
-
 .hero .hero-title {
     font-size: 56px;
     line-height: 1.07;
@@ -181,19 +202,20 @@ body {
 
 /* ---Advantages--- */
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+/* modul 4 */
+
+.advantages-icon-wrapper {
+    width: 100%;
+    background-color: #F4F4FD;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
+
+/* modul 4 */
 .advantages-list {
     display: flex;
     gap: 24px;
@@ -232,6 +254,10 @@ body {
     margin: 0 auto 72px auto;
 }
 
+.team-section {
+    background-color: #F4F4FD;
+}
+
 .team-list {
     display: flex;
     gap: 24px;
@@ -248,10 +274,6 @@ body {
     text-align: center;
     margin-bottom: 8px;
 
-}
-
-.team-text {
-    text-align: center;
 }
 
 .team-border {
@@ -285,11 +307,30 @@ body {
 .team-text {
     text-align: center;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
-.team-section {
-    background-color: #F4F4FD;
+/* modul 4 */
+.team-social-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 100%;
 }
+
+.team-social-links .team-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #FFFFFF;
+}
+
+/* modul 4 */
 
 /* ---/Team--- */
 
@@ -362,10 +403,6 @@ body {
     margin-bottom: 16px; 
 }
 
-.text-footer {
-    max-width: 264px;
-}
-
 .site-footer {
     background-color: #2E2F42;
 }
@@ -377,6 +414,41 @@ body {
 .text-footer {
     color: #F4F4FD;
     letter-spacing: 0.02em;
+    max-width: 264px;
+}
+/* modul 4 */
+
+.footer-wrapper {
+    display: flex;
+    gap: 120px;
 }
 
+.footer-social-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: space-between;
+    width: 208px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+    fill: #FFFFFF;
+}
+
+
+/* modul 4 */
 /* ---/Footer--- */
